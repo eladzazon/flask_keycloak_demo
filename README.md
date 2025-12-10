@@ -1,5 +1,3 @@
-<img width="895" height="324" alt="image" src="https://github.com/user-attachments/assets/e320dbee-b9b0-45b6-ac4b-0240177f190d" /># Flask Keycloak Integration Guide
-
 This guide provides step-by-step instructions to set up a Flask application with Keycloak authentication from scratch, including setting up Keycloak locally using Docker.
 
 ## 1. Environment Setup (Docker)
