@@ -1,4 +1,4 @@
-# Flask Keycloak Integration Guide
+<img width="895" height="324" alt="image" src="https://github.com/user-attachments/assets/e320dbee-b9b0-45b6-ac4b-0240177f190d" /># Flask Keycloak Integration Guide
 
 This guide provides step-by-step instructions to set up a Flask application with Keycloak authentication from scratch, including setting up Keycloak locally using Docker.
 
@@ -183,11 +183,14 @@ You need to configure a Realm, Client, and Users manually.
 
 ## 5. Screenshots
 
-1. **Login Page**:
+1. **Main Page (Without login)**:
+<img width="895" height="324" alt="image" src="https://github.com/user-attachments/assets/d33c83d7-f4db-437c-ad41-72d6167fd2e7" />
+
+2. **Keycloak Login Page**:
 <img width="771" height="555" alt="image" src="https://github.com/user-attachments/assets/bf8fa677-5861-4cce-8823-eebcbe7f5e3d" />
 
-2. **Profile Page**:
+3. **Profile Page (After login)**:
 <img width="1144" height="911" alt="image" src="https://github.com/user-attachments/assets/e04b46ed-910a-4b11-afb6-2467b7c66426" />
 
-3. **Main Page**:
+4. **Main Page (After login)**:
 <img width="578" height="344" alt="image" src="https://github.com/user-attachments/assets/6566ddc9-8060-4e95-957c-474003759174" />
