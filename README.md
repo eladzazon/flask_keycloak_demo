@@ -37,7 +37,7 @@ We use `docker-compose` to spin up a Keycloak instance backed by a PostgreSQL da
           KC_DB_USERNAME: keycloak
           KC_DB_PASSWORD: password
         ports:
-          - "8888:8080" # Maps local port 8888 to container port 8080
+          - "8080:8080" # Maps local port 8080 to container port 8080
         depends_on:
           postgres:
             condition: service_healthy
@@ -52,14 +52,14 @@ We use `docker-compose` to spin up a Keycloak instance backed by a PostgreSQL da
     ```
     Wait for Keycloak to start. You can check logs with `docker logs -f keycloak-app`. Once it says "Listening on: 0.0.0.0:8080", it's ready.
 
-    **Access Keycloak**: [http://localhost:8888](http://localhost:8888)
+    **Access Keycloak**: [http://localhost:8080](http://localhost:8080)
 
 ## 2. Keycloak Configuration
 
 You need to configure a Realm, Client, and Users manually.
 
 1.  **Login to Admin Console**:
-    *   URL: [http://localhost:8888/admin](http://localhost:8888/admin)
+    *   URL: [http://localhost:8080/admin](http://localhost:8080/admin)
     *   Username: `admin`
     *   Password: `admin`
 
@@ -138,8 +138,8 @@ You need to configure a Realm, Client, and Users manually.
     Create or edit the `.env` file in `flask_keycloak_demo/.env`.
     
     ```properties
-    # Keycloak URL (Note port 8888 matches docker-compose)
-    OIDC_ISSUER=http://localhost:8888/realms/my-realm
+    # Keycloak URL (Note port 8080 matches docker-compose)
+    OIDC_ISSUER=http://localhost:8080/realms/my-realm
     
     # Client ID from Step 2.3
     OIDC_CLIENT_ID=my-flask-app
