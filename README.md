@@ -180,3 +180,14 @@ You need to configure a Realm, Client, and Users manually.
 3.  **Check Data**:
     *   **Identity**: should show "Test User", "testuser", and "testuser@example.com".
     *   **Groups**: should show a list containing `group-a`.
+
+## 5. Screenshots
+
+1. **Login Page**:
+<img width="771" height="555" alt="image" src="https://github.com/user-attachments/assets/bf8fa677-5861-4cce-8823-eebcbe7f5e3d" />
+
+2. **Profile Page**:
+<img width="1144" height="911" alt="image" src="https://github.com/user-attachments/assets/e04b46ed-910a-4b11-afb6-2467b7c66426" />
+
+3. **Main Page**:
+<img width="578" height="344" alt="image" src="https://github.com/user-attachments/assets/6566ddc9-8060-4e95-957c-474003759174" />
