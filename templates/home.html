@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Welcome to Flask Keycloak Demo</h1>
+{% if session.get('user') %}
+<p>Authentication successful!</p>
+<p>Hello, <strong>{{ session.get('user').get('userinfo', {}).get('preferred_username', 'User') }}</strong></p>
+<div style="margin-top: 1rem;">
+    <a href="{{ url_for('profile') }}" class="btn">View Your Roles & Details</a>
+</div>
+{% else %}
+<p>This is a demonstration of Flask integration with Keycloak.</p>
+<div style="margin-top: 1rem;">
+    <a href="{{ url_for('login') }}" class="btn">Login with Keycloak</a>
+</div>
+{% endif %}
+{% endblock %}

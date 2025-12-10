@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>User Profile</h1>
+
+{% set user_info = user if user else {} %}
+
+<h2>Identity</h2>
+<div class="data-box">
+    <ul>
+        <li><strong>Username:</strong> {{ user_info.get('preferred_username', 'N/A') }}</li>
+        <li><strong>Email:</strong> {{ user_info.get('email', 'N/A') }}</li>
+        <li><strong>Full Name:</strong> {{ user_info.get('name', 'N/A') }}</li>
+        <li><strong>Sub (ID):</strong> {{ user_info.get('sub', 'N/A') }}</li>
+    </ul>
+</div>
+
+<h2>Groups & Roles</h2>
+<p>Below is the raw token data which contains your roles and groups:</p>
+
+<!-- Try to extract Realm Roles specifically if they exist in standard location -->
+{% if user_info.get('realm_access') %}
+<h3>Realm Roles</h3>
+<div class="data-box">
+    <ul>
+        {% for role in user_info['realm_access'].get('roles', []) %}
+        <li>{{ role }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+<!-- Extract Groups if available -->
+{% if user_info.get('groups') %}
+<h3>Groups</h3>
+<div class="data-box">
+    <ul>
+        {% for group in user_info.get('groups', []) %}
+        <li>{{ group }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+<h3>Raw Token Data</h3>
+<div class="data-box">
+    <pre>{{ token | tojson(indent=2) }}</pre>
+</div>
+{% endblock %}
